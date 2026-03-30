@@ -4,6 +4,8 @@
     background: url(./assets/images/top-banner.webp);
     color: #000;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
 }
 
