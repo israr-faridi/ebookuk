@@ -63,14 +63,17 @@
     justify-content: center;
     gap: 10px;
 }
-.sec-2 .heading{
-    margin-bottom: 50px;
-}
 
-.heverCardMain{
+
+.hoverCardMain{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 50px;
+    
+}
+.hoverCardMain .row > div {
+    /* display: flex;
+    margin-bottom: 40px;  */
 }

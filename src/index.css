@@ -82,9 +82,11 @@ h2 {
   line-height: 48px;
   font-family: var(--font-500);
 }
-a{
+
+a {
   padding: 0;
 }
+
 p {
   font-size: 1rem;
   line-height: 22px;
@@ -101,11 +103,27 @@ section {
   padding: 50px 0;
 }
 
+
+
 .heading {
   margin: auto;
+  margin-bottom: 50px;
   width: 700px;
   text-align: center;
 }
-.heading h2{
+
+.heading.left {
+  text-align: left;
+}
+
+.heading.right {
+  text-align: right;
+}
+
+.heading.center {
+  text-align: center;
+}
+
+.heading h2 {
   margin-bottom: 10px;
 }

@@ -13,9 +13,9 @@ const Footer = () => {
                         </div>
                         <div className="footer_icons">
                             <Link><i className="ri-facebook-fill"></i></Link>
-                            <Link><i class="ri-twitter-x-line"></i></Link>
-                            <Link><i class="ri-linkedin-fill"></i></Link>
-                            <Link><i class="ri-youtube-fill"></i></Link>
+                            <Link><i className="ri-twitter-x-line"></i></Link>
+                            <Link><i className="ri-linkedin-fill"></i></Link>
+                            <Link><i className="ri-youtube-fill"></i></Link>
                         </div>
                     </div>
                     <div className="row">
