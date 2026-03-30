@@ -22,7 +22,7 @@ button:hover {
     margin: 60px 0;
 }
 
-a {
+.common-btn {
     text-decoration: none;
     border: 1px solid transparent;
     padding: 8px 12px;
@@ -32,20 +32,22 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
-a.red {
-    background: var(--light-secondary);
+.common-btn.red {
+    background: var(--secondary);
     color: #fff;
 }
-a.black{
+
+.common-btn.black {
     color: #000;
     border-color: #000;
 }
 
-a.white{
+.common-btn.white {
     color: #fff;
     border-color: #fff;
 }
-a:hover{
+
+.common-btn:hover {
     background: var(--primary);
     color: #fff;
 }
