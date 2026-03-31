@@ -1,10 +1,13 @@
+import BrandSlider from "../components/BrandSlider/BrandSlider"
 import BrandReview from "../components/Common/BrandReview"
 import Button from "../components/Common/Button"
 import HeadingCenter from "../components/Common/HeadingCenter"
+import Gallery from "../components/Gallery/Gallery"
 import HeroBottom from "../components/Hero/HeroBottom/HeroBottom"
 import HeroImg from "../components/Hero/HeroImg/HeroImg"
 import HeroTitle from "../components/Hero/HeroTitle/HeroTitle"
 import HoverCard from "../components/HoverCard/HoverCard"
+import SecondBanner from "../components/SecondBanner/SecondBanner"
 
 const Home = () => {
     const hoverDataArray = [{
@@ -84,19 +87,21 @@ const Home = () => {
                 <HeadingCenter heading={"The Right Partner Makes Every Book Stronger"} para={"Writing a book takes courage. Publishing it requires the right support. Our team works closely with authors so their stories reach readers in the best possible form."} />
 
                 <div className="container">
-                    <div className="hoverCardMain">
-                        <div className="row g-5">
-                            {hoverDataArray.map((data, idx) => (
-                                <div className="col-12 col-md-6 col-lg-4" key={idx}>
-                                    <HoverCard  heading={data.heading} para={data.para} icon={"ri-shield-line"} />
-                                </div>
-                            ))}
-                        </div>
-
+                    <div className="row g-5">
+                        {hoverDataArray.map((data, idx) => (
+                            <div className="col-12 col-md-6 col-lg-4" key={idx}>
+                                <HoverCard heading={data.heading} para={data.para} icon={"ri-shield-line"} />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
+            <BrandSlider />
+
+            <SecondBanner h2={"Your Story Has Waited Long Enough"} h3={"Start Your Journey Now"} para={"That manuscript sitting quietly on your computer deserves readers. Let us help you bring it to life."} />
+
+            <Gallery/>
         </>
     )
 }
