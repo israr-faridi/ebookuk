@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './Gallery.css'
 import ImgCard from '../Common/ImgCard';
+import HeadingCenter from '../Common/HeadingCenter';
 
 const Gallery = () => {
     const booksData = {
@@ -60,6 +61,7 @@ const Gallery = () => {
     return (
         <section className='GalleryTab'>
             <div className="container">
+                <HeadingCenter heading={"Books That Started as Ideas and Became Real Stories"} name={"center"} />
                 <div className="row">
                     <div className="col-12 col-md-4 col-lg-4">
                         <div className="GalleryTabs">

@@ -9,16 +9,23 @@
     font-size: 1.4rem;
     background: transparent;
     color: #6A7382;
+    transition: all 0.3s ease-in-out;
 }
+
 .GalleryTabs button.active {
-background: var(--secondary);
-color: #fff;
+    background: var(--secondary);
+    color: #fff;
+}
+.GalleryTabs button:hover {
+    background: var(--secondary);
+    color: #fff;
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    transition: all 0.3s ease-in-out;
 }
 
 .gallery .card {

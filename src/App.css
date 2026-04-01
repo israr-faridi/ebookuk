@@ -47,9 +47,11 @@
 .image {
     width: 100%;
 }
-.sec-1{
+
+.sec-1 {
     background: #F6F6F6;
 }
+
 .sec-1 .container>:first-child {
     align-items: center;
 }
@@ -58,8 +60,30 @@
 .sec-1 .container>:nth-child(2) {
     margin: 40px 0;
 }
-.buttons{
+
+.buttons {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
+
+/* Vertical Card over */
+.VerticalHover {
+    background: url("./assets/images/process-bg.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px;
+    color: #fff;
+}
+
+.VerticalHover p {
+    color: #fff;
+}
+
+
+.reviewSliderSection{
+    background: #F6F6F6;
+}
+
+

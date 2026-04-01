@@ -111,9 +111,13 @@ section {
   width: 700px;
   text-align: center;
 }
-
+.heading span{
+  display: block;
+}
 .heading.left {
   text-align: left;
+  margin: 0;
+  margin-bottom: 50px;
 }
 
 .heading.right {
@@ -125,5 +129,5 @@ section {
 }
 
 .heading h2 {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
