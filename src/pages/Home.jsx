@@ -1,11 +1,68 @@
+import { useState } from "react"
+import BrandSlider from "../components/BrandSlider/BrandSlider"
 import BrandReview from "../components/Common/BrandReview"
 import Button from "../components/Common/Button"
+import HeadingCenter from "../components/Common/HeadingCenter"
+import Gallery from "../components/Gallery/Gallery"
 import HeroBottom from "../components/Hero/HeroBottom/HeroBottom"
 import HeroImg from "../components/Hero/HeroImg/HeroImg"
 import HeroTitle from "../components/Hero/HeroTitle/HeroTitle"
 import HoverCard from "../components/HoverCard/HoverCard"
+import SecondBanner from "../components/SecondBanner/SecondBanner"
+import VerticalHover from "../components/VerticalHover/VerticalHover"
+import ReviewSlider from "../components/ReviewSlider/ReviewSlider"
 
 const Home = () => {
+    const hoverDataArray = [{
+        heading: "Skilled Book Professionals",
+        para: "Our team includes experienced writers, editors, and publishing specialists who understand how strong books are built. They study the flow of your manuscript and help refine it without replacing your voice"
+    },
+    {
+        heading: "Your Story Stays Yours",
+        para: "Every writer carries a unique tone and perspective. We respect that voice. Suggestions focus on strengthening your message rather than reshaping it into something unfamiliar."
+    },
+    {
+        heading: "Clear Guidance at Every Step",
+        para: "Many authors feel uncertain during the publishing process. We keep communication open so you always know where your book stands and what comes next."
+    },
+    {
+        heading: "Complete Publishing Knowledge",
+        para: "Writing a book represents only part of the work. Formatting, digital distribution, and technical preparation require specific knowledge. Our publishing team handles these details with precision."
+    },
+    {
+        heading: "Covers That Catch Attention",
+        para: "Readers often judge a book by its cover. Our designers craft visuals that reflect the story inside while drawing attention on digital shelves."
+    },
+    {
+        heading: "Post- Publishing Support",
+        para: "The journey does not end once the book appears online. Many authors return with new ideas or additional projects. We stay available as a long-term creative partner."
+    }]
+    const verticalHover = [{
+        id: "1",
+        heading: "Understanding Your Vision",
+        para: "Every project begins with a conversation. We explore your idea, your purpose, and the readers you hope to reach. This discussion shapes the direction of the manuscript."
+    }, {
+        id: "2",
+        heading: "Structuring the Manuscript",
+        para: "Strong books follow a clear structure. Our team organizes your chapters so the narrative flows smoothly from beginning to end."
+    }, {
+        id: "3",
+        heading: "Collaborative Writing Support",
+        para: "Some authors need help expanding their ideas into full chapters. Our writers assist in strengthening the manuscript while keeping your voice intact."
+    }, {
+        id: "4",
+        heading: "Professional Editing",
+        para: "Our editors sharpen every page and make sentences clearer. Chapters gain better rhythm. The entire manuscript reads smoothly."
+    }, {
+        id: "5",
+        heading: "Design and Formatting",
+        para: "A book must look as good as it reads. Our designers prepare professional covers and format your manuscript for digital devices."
+    }, {
+        id: "6",
+        heading: "Publishing Your Ebook",
+        para: "The final stage prepares your manuscript for online bookstores. Your draft becomes a polished ebook ready for readers around the world."
+    },]
+    const [activeIndex, setActiveIndex] = useState(0);
     return (
         <>
             {/* Hero */}
@@ -36,7 +93,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="col-12 col-md-12 col-lg-6">
-                            <h2>A Place Where Writers Turn Ideas Into Published Books</h2>
+                            <HeadingCenter name="left" heading={"A Place Where Writers Turn Ideas Into Published Books"} />
                         </div>
                     </div>
                     <div className="row">
@@ -56,22 +113,67 @@ const Home = () => {
 
             {/* Section 2 */}
             <section className="sec-2">
-                <div className="heading">
-                    <h2>The Right Partner Makes Every Book Stronger</h2>
-                    <p>Writing a book takes courage. Publishing it requires the right support. Our team works closely with authors so their stories reach readers in the best possible form.</p>
-                </div>
+                <HeadingCenter heading={"The Right Partner Makes Every Book Stronger"} para={"Writing a book takes courage. Publishing it requires the right support. Our team works closely with authors so their stories reach readers in the best possible form."} />
+
                 <div className="container">
-                    <div className="heverCardMain">
-                        <HoverCard heading={"Skilled Book Professionals"} para={"Our team includes experienced writers, editors, and publishing specialists who understand how strong books are built. They study the flow of your manuscript and help refine it without replacing your voice"} icon={"ri-shield-line"} />
-                        <HoverCard heading={"Skilled Book Professionals"} para={"Our team includes experienced writers, editors, and publishing specialists who understand how strong books are built. They study the flow of your manuscript and help refine it without replacing your voice"} icon={"ri-shield-line"} />
-                        <HoverCard heading={"Skilled Book Professionals"} para={"Our team includes experienced writers, editors, and publishing specialists who understand how strong books are built. They study the flow of your manuscript and help refine it without replacing your voice"} icon={"ri-shield-line"} />
-                        <HoverCard heading={"Skilled Book Professionals"} para={"Our team includes experienced writers, editors, and publishing specialists who understand how strong books are built. They study the flow of your manuscript and help refine it without replacing your voice"} icon={"ri-shield-line"} />
-                        <HoverCard heading={"Skilled Book Professionals"} para={"Our team includes experienced writers, editors, and publishing specialists who understand how strong books are built. They study the flow of your manuscript and help refine it without replacing your voice"} icon={"ri-shield-line"} />
-                        <HoverCard heading={"Skilled Book Professionals"} para={"Our team includes experienced writers, editors, and publishing specialists who understand how strong books are built. They study the flow of your manuscript and help refine it without replacing your voice"} icon={"ri-shield-line"} />
+                    <div className="row g-5">
+                        {hoverDataArray.map((data, idx) => (
+                            <div className="col-12 col-md-6 col-lg-4" key={idx}>
+                                <HoverCard heading={data.heading} para={data.para} icon={"ri-shield-line"} />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
+            <BrandSlider />
+
+            <SecondBanner h2={"Your Story Has Waited Long Enough"} h3={"Start Your Journey Now"} para={"That manuscript sitting quietly on your computer deserves readers. Let us help you bring it to life."} />
+
+            <Gallery />
+
+
+
+
+
+            <section className='VerticalHover'>
+                <div className="container">
+                    <HeadingCenter heading={"A Clear Road From "} subHeading={"First Idea to Finished Ebook"} name={"left"} para={"Writing a book sometimes feels like walking through fog. You know the destination exists, yet the path appears unclear. Our process acts like a guide through that fog. Each stage moves your manuscript closer to a finished book that readers can enjoy."} />
+                    <div className="VerticalHoverContainer">
+                        {verticalHover.map((data, index) => (
+                            <VerticalHover
+                                key={data.id}
+                                heading={data.heading}
+                                para={data.para}
+                                num={data.id}
+                                isActive={activeIndex === index}
+                                onClick={() => setActiveIndex(index)}
+                                onMouseEnter={() => setActiveIndex(index)}
+                            />))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="reviewSliderSection">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-md-6 col-lg-6">
+                            <div className="reviewSliderSectionData">
+                                <HeadingCenter heading={"Writers Share"} subHeading={"Their Experience With Us"} name={"left"} para={"Behind every review stands an author who once held an unfinished manuscript. These writers trusted us with their ideas. Today, their books sit proudly on digital shelves."} />
+                            </div>
+                        </div>
+                        <div className="col-12 col-md-6 col-lg-6">
+                            <div className="reviewSliderMain">
+                                <ReviewSlider />
+                            </div>
+                        </div>
+                        <div className="buttons">
+                        <Button link={"/"} name={"red"} value={"Get a Quote"} />
+                        <Button link={"/"} name={"black"} value={"Chat With Us"} />
+                    </div>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
