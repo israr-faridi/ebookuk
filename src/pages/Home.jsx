@@ -63,18 +63,51 @@ const Home = () => {
         para: "The final stage prepares your manuscript for online bookstores. Your draft becomes a polished ebook ready for readers around the world."
     },]
     const [activeIndex, setActiveIndex] = useState(0);
+    const reviewSliderData = [
+        {
+            para: "“I had notes scattered everywhere. Their team helped shape them into a structured book. Watching it appear online felt incredible.”",
+            author: "Amanda R.",
+            service: "Book Author",
+            img: "../src/assets/images/review1.webp"
+        }, {
+            para: "“The editing improved my manuscript without removing my personal style. That balance impressed me.”",
+            author: "Daniel M.",
+            service: "Book Author",
+            img: "../src/assets/images/review1.webp"
+        }, {
+            para: "“The cover design caught my attention immediately. It reflected the theme of my book perfectly.”",
+            author: "Lucas T.",
+            service: "Book Author",
+            img: "../src/assets/images/review1.webp"
+        }, {
+            para: "“I had notes scattered everywhere. Their team helped shape them into a structured book. Watching it appear online felt incredible.”",
+            author: "Amanda R.",
+            service: "Book Author",
+            img: "../src/assets/images/review1.webp"
+        }, {
+            para: "“The editing improved my manuscript without removing my personal style. That balance impressed me.”",
+            author: "Daniel M.",
+            service: "Book Author",
+            img: "../src/assets/images/review1.webp"
+        }, {
+            para: "“The cover design caught my attention immediately. It reflected the theme of my book perfectly.”",
+            author: "Lucas T.",
+            service: "Book Author",
+            img: "../src/assets/images/review1.webp"
+        }
+    ]
     return (
         <>
             {/* Hero */}
             <section className="hero">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 col-md-6 col-lg-6">
+                        <div className="col-12 col-md-12 col-lg-6">
                             <div className="hero-data">
                                 <HeroTitle heading={<>Every Great Book Begins With a <span> Voice Like Yours</span></>} headingpara={<>Avail the <span>best eBook writing services</span> at pocket-friendly rates</>} para={"Our ebook publishing platform helps authors transform their thoughts into books that readers can hold on their screens and remember long after the final page."} />
                             </div>
                         </div>
-                        <div className="col-12 col-md-6 col-lg-6">
+                        <div className="col-12 col-md-12 col-lg-6">
                             <HeroImg img_url={"../src/assets/images/top-banner-book.webp"} />
                         </div>
                     </div>
@@ -164,13 +197,13 @@ const Home = () => {
                         </div>
                         <div className="col-12 col-md-6 col-lg-6">
                             <div className="reviewSliderMain">
-                                <ReviewSlider />
+                                <ReviewSlider reviewSliderData={reviewSliderData} />
                             </div>
                         </div>
                         <div className="buttons">
-                        <Button link={"/"} name={"red"} value={"Get a Quote"} />
-                        <Button link={"/"} name={"black"} value={"Chat With Us"} />
-                    </div>
+                            <Button link={"/"} name={"red"} value={"Get a Quote"} />
+                            <Button link={"/"} name={"black"} value={"Chat With Us"} />
+                        </div>
                     </div>
                 </div>
             </section>
