@@ -11,6 +11,8 @@ import HoverCard from "../components/HoverCard/HoverCard"
 import SecondBanner from "../components/SecondBanner/SecondBanner"
 import VerticalHover from "../components/VerticalHover/VerticalHover"
 import ReviewSlider from "../components/ReviewSlider/ReviewSlider"
+import Seo from "../components/Common/Seo"
+import ServicesSection from "../components/ServicesSection/ServicesSection"
 
 const Home = () => {
     const hoverDataArray = [{
@@ -96,8 +98,22 @@ const Home = () => {
             img: "../src/assets/images/review1.webp"
         }
     ]
+    const ServiceSectionData = [{
+        heading: "Book Writing",
+        para: "Ideas grow into full manuscripts through structured writing support. Our team helps expand concepts into engaging chapters while protecting the original voice of the author."
+    }, {
+        heading: "Book Editing",
+        para: "Editing improves readability and strengthens clarity across the manuscript. Each chapter becomes smoother and easier for readers to follow."
+    }, {
+        heading: "Book Marketing",
+        para: "Publishing a book marks the beginning of its journey. Marketing helps readers discover your work in crowded digital stores."
+    }, {
+        heading: "Book Publishing",
+        para: "We prepare your ebook for professional release across major platforms so readers can access it anywhere."
+    }]
     return (
         <>
+            <Seo title="Home" description="Best ebook writing services at affordable rates" />
             {/* Hero */}
             <section className="hero">
                 <div className="container">
@@ -207,6 +223,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <ServicesSection data={ServiceSectionData} heading={"Everything an Author Needs to Bring a Book to Life"} para={"A book rarely reaches perfection in a single draft. It needs shaping, polishing, and professional preparation. Our services cover each stage so authors can focus on their message."} name={"left"} img={"../src/assets/images/sec-5.webp"}/>
         </>
     )
 }
