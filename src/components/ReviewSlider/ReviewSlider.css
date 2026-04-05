@@ -65,11 +65,12 @@
   width: 100%;
 }
 
-.review-slide-bottom h4 {
+.review-slide-bottom-right h4 {
   margin-bottom: 0;
   padding: 0;
   font-size: 1.2rem;
   font-family: var(--font-600);
+  color: var(--primary);
 }
 
 .review-slide-bottom p {

@@ -63,6 +63,40 @@ const Home = () => {
         para: "The final stage prepares your manuscript for online bookstores. Your draft becomes a polished ebook ready for readers around the world."
     },]
     const [activeIndex, setActiveIndex] = useState(0);
+
+    const reviewSlider = [{
+        para: "“I had notes scattered everywhere. Their team helped shape them into a structured book. Watching it appear online felt incredible.”",
+        author: "Amanda R.",
+        service: "Book Author",
+        img: "../src/assets/images/review1.webp",
+    }, {
+        para: "“The editing improved my manuscript without removing my personal style. That balance impressed me.”",
+        author: "Daniel M.",
+        service: "Book Author",
+        img: "../src/assets/images/review1.webp",
+    }, {
+        para: "“The cover design caught my attention immediately. It reflected the theme of my book perfectly.”",
+        author: "Lucas T.",
+        service: "Book Author",
+        img: "../src/assets/images/review1.webp",
+    }, {
+        para: "“I had notes scattered everywhere. Their team helped shape them into a structured book. Watching it appear online felt incredible.”",
+        author: "Amanda R.",
+        service: "Book Author",
+        img: "../src/assets/images/review1.webp",
+    }, {
+        para: "“The editing improved my manuscript without removing my personal style. That balance impressed me.”",
+        author: "Daniel M.",
+        service: "Book Author",
+        img: "../src/assets/images/review1.webp",
+    }, {
+        para: "“The cover design caught my attention immediately. It reflected the theme of my book perfectly.”",
+        author: "Lucas T.",
+        service: "Book Author",
+        img: "../src/assets/images/review1.webp",
+    }]
+
+
     return (
         <>
             {/* Hero */}
@@ -164,13 +198,13 @@ const Home = () => {
                         </div>
                         <div className="col-12 col-md-6 col-lg-6">
                             <div className="reviewSliderMain">
-                                <ReviewSlider />
+                                <ReviewSlider data={reviewSlider} />
                             </div>
                         </div>
                         <div className="buttons">
-                        <Button link={"/"} name={"red"} value={"Get a Quote"} />
-                        <Button link={"/"} name={"black"} value={"Chat With Us"} />
-                    </div>
+                            <Button link={"/"} name={"red"} value={"Get a Quote"} />
+                            <Button link={"/"} name={"black"} value={"Chat With Us"} />
+                        </div>
                     </div>
                 </div>
             </section>
