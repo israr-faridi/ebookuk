@@ -8,7 +8,7 @@ import { EffectCards, Autoplay, Navigation } from 'swiper/modules';
 
 import "./ReviewSlider.css"
 
-const ReviewSlider = ({ reviewSliderData }) => {
+const ReviewSlider = ({ data }) => {
     return (
         <>
             <Swiper
@@ -26,10 +26,9 @@ const ReviewSlider = ({ reviewSliderData }) => {
                 modules={[EffectCards, Autoplay, Navigation]}
                 className="reviewSlider"
             >
-                {reviewSliderData.map((data, idx) => {
-                   return<>
-                    <SwiperSlide>
-                        <div key={idx} className="review-slide">
+                {data.map((data, idx) => {
+                    return <SwiperSlide key={idx} >
+                        <div className="review-slide">
                             <div className="review-slide-top">
                                 <div className="review-slide-top-left">
                                     <i className="ri-star-fill"></i>
@@ -55,9 +54,8 @@ const ReviewSlider = ({ reviewSliderData }) => {
                                 </div>
                             </div>
                         </div>
-                    </SwiperSlide></>
+                    </SwiperSlide>
                 })}
-
                 {/* <!-- Navigation Buttons --> */}
                 <div className="next">
                     <i className="ri-arrow-right-s-line"></i>
