@@ -1,0 +1,22 @@
+.servicesCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.servicesCard {
+    width: 50%;
+    
+}
+
+.servicesCardIcon {
+    text-align: end;
+}
+
+.servicesCardIcon i {
+    background: var(--secondary);
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 6px;
+    border-radius: 8px;
+}
